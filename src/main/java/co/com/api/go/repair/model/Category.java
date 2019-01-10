@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SERVICE")
-public class Services {
+@Table(name = "CATEGORY")
+public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +24,6 @@ public class Services {
 
 	@Column(name = "description")
 	private String description;
-
-	@Column(name = "currency")
-	private Long currency;
-
-	@Column(name = "id_category")
-	private Long idCategory;
 
 	public Long getId() {
 		return id;
@@ -61,22 +55,6 @@ public class Services {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public Long getCurrency() {
-		return currency;
-	}
-
-	public void setCurrency(Long currency) {
-		this.currency = currency;
-	}
-
-	public Long getIdCategory() {
-		return idCategory;
-	}
-
-	public void setIdCategory(Long idCategory) {
-		this.idCategory = idCategory;
 	}
 
 }
