@@ -10,16 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "SUSCRIPTION")
+@Table(name = "suscription")
 public class Suscription {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
-
-	@Column(name = "id_user")
-	private Long idUser;
 
 	@Column(name = "name")
 	private String name;
@@ -45,14 +42,6 @@ public class Suscription {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getIdUser() {
-		return idUser;
-	}
-
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
 	}
 
 	public String getName() {
